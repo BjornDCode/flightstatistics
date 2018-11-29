@@ -6,13 +6,10 @@ let colors = {
   'black': '#22292f',
   'white': '#ffffff',
 
-  'blue-darkest': '#12283a',
-  'blue-darker': '#1c3d5a',
-  'blue-dark': '#2779bd',
-  'blue': '#3490dc',
-  'blue-light': '#6cb2eb',
-  'blue-lighter': '#bcdefa',
-  'blue-lightest': '#eff8ff',
+  'blue-darkest': '#1E2C4B', // BG
+  'blue': '#495A7C', // Map
+  'blue-lighter': '#6D80A7', // Dark blue text
+  'blue-lightest': '#C2CFE8', // Light blue text
 }
 
 module.exports = {
