@@ -25,9 +25,7 @@
 
         methods: {
             checkOrientation() {
-                const orientation = screen.msOrientation || (screen.orientation || screen.mozOrientation || {}).type
-
-                this.portraitMode = orientation === "portrait-secondary" || orientation === "portrait-primary"
+                this.portraitMode = window.innerWidth > window.innerHeight ? false : true
             },
         }
     }
