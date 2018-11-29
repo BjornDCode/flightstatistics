@@ -3,14 +3,19 @@
         <ir-screen-md direction="down">
             <orientation-notice></orientation-notice>
         </ir-screen-md>
+        <ir-screen-sm direction="down">
+            <mobile-notice></mobile-notice>
+        </ir-screen-sm>
     </div>
 </template>
 
 <script>
+    import MobileNotice from './components/MobileNotice'
     import OrientationNotice from './components/OrientationNotice'
 
     export default {
         components: {
+            MobileNotice,
             OrientationNotice
         }
     }
