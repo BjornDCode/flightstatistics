@@ -8,3 +8,9 @@
     export default {
     }
 </script>
+
+<style>
+    @tailwind preflight;
+    @tailwind components;
+    @tailwind utilities;
+</style>
