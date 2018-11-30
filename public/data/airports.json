@@ -39,6 +39,96 @@
                 "y": 112
             },
             "radius": 6
+        },
+        {
+            "name": "Dubai International Airport",
+            "code": "dxb",
+            "city": "Dubai",
+            "coordinates": {
+                "x": 710,
+                "y": 227
+            },
+            "radius": 6
+        },
+        {
+            "name": "Singapore Changi Airport",
+            "code": "sin",
+            "city": "Singapore",
+            "coordinates": {
+                "x": 905,
+                "y": 320
+            },
+            "radius": 6
+        },
+        {
+            "name": "Los Angeles International Airport",
+            "code": "lax",
+            "city": "Los Angelse",
+            "coordinates": {
+                "x": 71,
+                "y": 184
+            },
+            "radius": 6
+        },
+        {
+            "name": "San Francisco International Airport",
+            "code": "sfo",
+            "city": "San Francisco",
+            "coordinates": {
+                "x": 65,
+                "y": 165
+            },
+            "radius": 6
+        },
+        {
+            "name": "Newark Liberty International Airport",
+            "code": "ewr",
+            "city": "Newark",
+            "coordinates": {
+                "x": 240,
+                "y": 160
+            },
+            "radius": 6
+        },
+        {
+            "name": "Hong Kong International Airport",
+            "code": "hkg",
+            "city": "Hong Kong",
+            "coordinates": {
+                "x": 932,
+                "y": 233
+            },
+            "radius": 6
+        },
+        {
+            "name": "Hamad International Airport",
+            "code": "doh",
+            "city": "Doha",
+            "coordinates": {
+                "x": 699,
+                "y": 221
+            },
+            "radius": 6
+        },
+        {
+            "name": "Vancouver International Airport",
+            "code": "yvr",
+            "city": "Vancouver",
+            "coordinates": {
+                "x": 96,
+                "y": 118
+            },
+            "radius": 6
+        },
+        {
+            "name": "Toronto Pearson International Airport",
+            "code": "yyz",
+            "city": "Toronto",
+            "coordinates": {
+                "x": 238,
+                "y": 139
+            },
+            "radius": 6
         }
     ]
 }
