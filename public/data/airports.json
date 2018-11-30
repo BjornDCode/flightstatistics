@@ -1,12 +1,12 @@
 {
-        "airports": [
+    "airports": [
         {
             "name": "Melbourne Airport",
             "code": "mel",
             "city": "Melbourn",
             "coordinates": {
-                "x": 943,
-                "y": 378
+                "x": 1002,
+                "y": 484
             },
             "radius": 6
         },
@@ -15,8 +15,28 @@
             "code": "syd",
             "city": "Sydney",
             "coordinates": {
-                "x": 978,
-                "y": 359
+                "x": 1037,
+                "y": 464
+            },
+            "radius": 6
+        },
+        {
+            "name": "John F. Kennedy International Airport",
+            "code": "jfk",
+            "city": "New York City",
+            "coordinates": {
+                "x": 248,
+                "y": 160
+            },
+            "radius": 6
+        },
+        {
+            "name": "Heathrow Airport",
+            "code": "lhr",
+            "city": "London",
+            "coordinates": {
+                "x": 512,
+                "y": 112
             },
             "radius": 6
         }

@@ -74,7 +74,8 @@
             <a href="https://www.reddit.com/r/MapsWithoutNZ/" target="_blank">
                 <path class="text-blue-darkest hover:text-blue" fill="currentColor" id="new-zealand" d="M1100.35 494.349l7.113-7.114v-10.67l2.846-1.186v7.588l4.98 6.64-17.311 12.33 2.371-7.588zm-45.53 24.898l36.044-18.259v4.743l-27.745 18.258-8.3-4.742z" />
             </a>
-            <g ref="airports" transform="translate(59 106)" fill="#DE5A5A"></g>
+
+            <g ref="airports"  fill="#DE5A5A"></g>
             <!--
             <g transform="translate(59 106)" fill="#DE5A5A">
                 <circle cx="453" cy="6" r="6" id="lhr" />
