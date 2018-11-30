@@ -76,7 +76,7 @@
             </a>
 
             <g ref="mostProfitableRoutes"></g>
-            <g ref="airports"  fill="#DE5A5A"></g>
+            <g ref="airports" fill="#DE5A5A"></g>
             <!--
             <g transform="translate(59 106)" fill="#DE5A5A">
                 <circle cx="453" cy="6" r="6" id="lhr" />
