@@ -75,6 +75,7 @@
                 <path class="text-blue-darkest hover:text-blue" fill="currentColor" id="new-zealand" d="M1100.35 494.349l7.113-7.114v-10.67l2.846-1.186v7.588l4.98 6.64-17.311 12.33 2.371-7.588zm-45.53 24.898l36.044-18.259v4.743l-27.745 18.258-8.3-4.742z" />
             </a>
 
+            <g ref="mostProfitableRoutes"></g>
             <g ref="airports"  fill="#DE5A5A"></g>
             <!--
             <g transform="translate(59 106)" fill="#DE5A5A">
@@ -114,6 +115,7 @@
 
 <script>
     import Airport from './Airport'
+    import Route from './Route'
 
     export default {
         data() {
@@ -123,17 +125,29 @@
         },
 
         mounted() {
-            fetch('/data/airports.json')
-                .then(result => result.json())
-                .then(data => {
-                    this.airports = data.airports
-                    this.airports.forEach(airport => {
-                        this.drawAirport(airport)
-                    })
+            this.loadData('/data/airports.json', data => {
+                this.airports = data.airports
+                this.airports.forEach(airport => {
+                    this.drawAirport(airport)
                 })
+            })
+
+            this.loadData('/data/most-profitable-routes.json', data => {
+                this.mostProfitableRoutes = data.routes
+
+                this.mostProfitableRoutes.forEach(route => {
+                    this.drawRoute(route)
+                })
+            })
         },
 
         methods: {
+            loadData(file, callback) {
+                fetch(file)
+                    .then(result => result.json())
+                    .then(callback)
+            },
+
             drawAirport(airport) {
                 const instance = new Airport({
                     propsData: {
@@ -143,6 +157,17 @@
 
                 instance.$mount()
                 this.$refs.airports.appendChild(instance.$el)
+            },
+
+            drawRoute(route) {
+                const instance = new Route({
+                    propsData: {
+                        route
+                    }
+                })
+
+                instance.$mount()
+                this.$refs.mostProfitableRoutes.appendChild(instance.$el)
             }
         }
     }
