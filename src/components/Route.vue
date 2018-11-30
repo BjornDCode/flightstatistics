@@ -73,7 +73,7 @@
 
         methods: {
             emitData() {
-                console.log('emited on hover')
+                this.$emit('routeSelect', this.route)
             }
         }
     })
