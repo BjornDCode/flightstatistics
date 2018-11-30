@@ -1,0 +1,24 @@
+{
+        "airports": [
+        {
+            "name": "Melbourne Airport",
+            "code": "mel",
+            "city": "Melbourn",
+            "coordinates": {
+                "x": 943,
+                "y": 378
+            },
+            "radius": 6
+        },
+        {
+            "name": "Sydney Airport",
+            "code": "syd",
+            "city": "Sydney",
+            "coordinates": {
+                "x": 978,
+                "y": 359
+            },
+            "radius": 6
+        }
+    ]
+}
