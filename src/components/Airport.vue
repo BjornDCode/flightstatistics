@@ -16,10 +16,6 @@
                 type: Object,
                 required: true
             }
-        },
-
-        mounted() {
-            console.log(this.airport)
         }
     })
 </script>
