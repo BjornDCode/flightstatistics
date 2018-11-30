@@ -1,22 +1,27 @@
 <template>
-    <div id="app" class="bg-blue-darkest min-h-screen font-sans">
+    <div id="app" class="bg-blue-darkest min-h-screen font-sans flex justify-center items-center">
         <ir-screen-md direction="down">
             <orientation-notice></orientation-notice>
         </ir-screen-md>
         <ir-screen-sm direction="down">
             <mobile-notice></mobile-notice>
         </ir-screen-sm>
+        <ir-screen-md>
+            <desktop-map></desktop-map>
+        </ir-screen-md>
     </div>
 </template>
 
 <script>
     import MobileNotice from './components/MobileNotice'
     import OrientationNotice from './components/OrientationNotice'
+    import DesktopMap from './components/DesktopMap'
 
     export default {
         components: {
             MobileNotice,
-            OrientationNotice
+            OrientationNotice,
+            DesktopMap,
         }
     }
 </script>
@@ -30,4 +35,10 @@
     @tailwind preflight;
     @tailwind components;
     @tailwind utilities;
+
+    @responsive {
+        .w-80 {
+            width: 80%;
+        }
+    }
 </style>
