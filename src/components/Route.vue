@@ -1,14 +1,21 @@
 <template>
-    <path 
-        v-if="routeAirports" 
-        :d="`
-            M${coordinates.x1},${coordinates.y1} 
-            A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
-        `"
-        stroke="#DE5A5A"
-        :stroke-width="active ? 5 : 3"
-        @mouseover="emitData"
-    ></path>
+    <transition name="route" appear>        
+        <path 
+            v-if="routeAirports" 
+            :d="`
+                M${coordinates.x1},${coordinates.y1} 
+                A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
+            `"
+            :style="`
+                --pathlength: ${pathLength};
+                --duration: ${createRandomTransitionDuration()}ms;
+            `"
+            stroke="#DE5A5A"
+            :stroke-width="active ? 5 : 3"
+            :stroke-dasharray="pathLength"
+            @mouseover="emitData"
+        ></path>
+    </transition>
 </template>
 
 <script>
@@ -32,7 +39,8 @@
 
         data() {
             return {
-                routeAirports: null
+                routeAirports: null,
+                pathLength: "0"
             }
         },
 
@@ -41,6 +49,10 @@
                 airport1: document.querySelector(`#${this.route.airport1}`),
                 airport2: document.querySelector(`#${this.route.airport2}`)
             }
+
+            this.$nextTick(() => {
+                this.pathLength = this.$el.getTotalLength()
+            })
         },
 
         computed: {
@@ -101,7 +113,21 @@
 
             getAirportName(airportCode) {
                 return this.airports.find(airport => airport.code === airportCode ).name
+            },
+
+            createRandomTransitionDuration() {
+                return Math.floor(Math.random() * 2000)
             }
         }
     })
 </script>
+
+<style>
+    .route-enter-active, .route-leave-active {
+        transition: stroke-dashoffset var(--duration);
+    }
+
+    .route-enter, .route-leave-to {
+        stroke-dashoffset: var(--pathlength);
+    }
+</style>
