@@ -2,8 +2,9 @@
     <circle 
         :cx="airport.coordinates.x" 
         :cy="airport.coordinates.y" 
-        :r="airport.radius" 
+        :r="active ? 8 : 6" 
         :id="airport.code" 
+        @mouseover="emitData"
     />
 </template>
 
@@ -15,6 +16,22 @@
             airport: {
                 type: Object,
                 required: true
+            },
+            active: {
+                type: Boolean,
+                required: true
+            }
+        },
+
+        methods: {
+            emitData() {
+                this.$emit('update', {
+                    'Airport': this.airport.name,
+                    'Code': this.airport.code.toUpperCase(),
+                    'City': this.airport.city
+                })
+
+                this.$emit('active', this.airport)
             }
         }
     })

@@ -3,12 +3,11 @@
         {
             "name": "Melbourne Airport",
             "code": "mel",
-            "city": "Melbourn",
+            "city": "Melbourne",
             "coordinates": {
                 "x": 1002,
                 "y": 484
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Sydney Airport",
@@ -17,8 +16,7 @@
             "coordinates": {
                 "x": 1037,
                 "y": 464
-            },
-            "radius": 6
+            }
         },
         {
             "name": "John F. Kennedy International Airport",
@@ -27,8 +25,7 @@
             "coordinates": {
                 "x": 248,
                 "y": 160
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Heathrow Airport",
@@ -37,8 +34,7 @@
             "coordinates": {
                 "x": 512,
                 "y": 112
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Dubai International Airport",
@@ -47,8 +43,7 @@
             "coordinates": {
                 "x": 710,
                 "y": 227
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Singapore Changi Airport",
@@ -57,8 +52,7 @@
             "coordinates": {
                 "x": 905,
                 "y": 320
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Los Angeles International Airport",
@@ -67,8 +61,7 @@
             "coordinates": {
                 "x": 71,
                 "y": 184
-            },
-            "radius": 6
+            }
         },
         {
             "name": "San Francisco International Airport",
@@ -77,8 +70,7 @@
             "coordinates": {
                 "x": 65,
                 "y": 165
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Newark Liberty International Airport",
@@ -87,8 +79,7 @@
             "coordinates": {
                 "x": 240,
                 "y": 160
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Hong Kong International Airport",
@@ -97,8 +88,7 @@
             "coordinates": {
                 "x": 932,
                 "y": 233
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Hamad International Airport",
@@ -107,8 +97,7 @@
             "coordinates": {
                 "x": 699,
                 "y": 221
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Vancouver International Airport",
@@ -117,8 +106,7 @@
             "coordinates": {
                 "x": 96,
                 "y": 118
-            },
-            "radius": 6
+            }
         },
         {
             "name": "Toronto Pearson International Airport",
@@ -127,8 +115,7 @@
             "coordinates": {
                 "x": 238,
                 "y": 139
-            },
-            "radius": 6
+            }
         }
     ]
 }

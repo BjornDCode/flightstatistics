@@ -80,11 +80,19 @@
                     v-for="route in mostProfitableRoutes" 
                     :route="route"
                     :airports="airports"
-                    @routeSelect="emitData"
+                    :active="route === activeItem"
+                    @update="emitData"
+                    @active="activeItem = $event"
                 ></route>
             </g>
             <g ref="airports" fill="#DE5A5A">
-                <airport v-for="airport in airports" :airport="airport"></airport>
+                <airport 
+                    v-for="airport in airports" 
+                    :airport="airport"
+                    :active="airport === activeItem"
+                    @update="emitData"
+                    @active="activeItem = $event"
+                ></airport>
             </g>
             <!--
             <g transform="translate(59 106)" fill="#DE5A5A">
@@ -131,7 +139,7 @@
             return {
                 airports: [],
                 mostProfitableRoutes: [],
-                activeRoute: null
+                activeItem: null
             }
         },
 

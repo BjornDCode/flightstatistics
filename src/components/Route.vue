@@ -6,7 +6,7 @@
             A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
         `"
         stroke="#DE5A5A"
-        stroke-width="3"
+        :stroke-width="active ? 5 : 3"
         @mouseover="emitData"
     ></path>
 </template>
@@ -22,6 +22,10 @@
             },
             airports: {
                 type: Array,
+                required: true
+            },
+            active: {
+                type: Boolean,
                 required: true
             }
         },
@@ -77,12 +81,14 @@
 
         methods: {
             emitData() {
-                this.$emit('routeSelect', {
+                this.$emit('update', {
                     'Spot': `#${this.route.spot}`,
                     'Route': `${this.getAirportName(this.route.airport1)} - ${this.getAirportName(this.route.airport2)}`,
                     'Airline': this.route.airline,
                     'Total Revenue': `${this.formatMoney(this.route.totalRevenue)}`
                 })
+
+                this.$emit('active', this.route)
             },
 
             formatMoney(money) {
