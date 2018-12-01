@@ -4,70 +4,70 @@
             "airport1": "lhr",
             "airport2": "jfk",
             "airline": "British Airways",
-            "total-revenue": 1037724867,
+            "totalRevenue": 1037724867,
             "spot": 1
         },
         {
             "airport1": "syd",
             "airport2": "mel",
             "airline": "Qantas Airways",
-            "total-revenue": 854692402,
+            "totalRevenue": 854692402,
             "spot": 2
         },
         {
             "airport1": "lhr",
             "airport2": "dxb",
             "airline": "Emirates",
-            "total-revenue": 819409702,
+            "totalRevenue": 819409702,
             "spot": 3
         },
         {
             "airport1": "lhr",
             "airport2": "sin",
             "airline": "Singapore Airlines",
-            "total-revenue": 709730107,
+            "totalRevenue": 709730107,
             "spot": 4
         },
         {
             "airport1": "jfk",
             "airport2": "lax",
             "airline": "American Airlines",
-            "total-revenue": 698074171,
+            "totalRevenue": 698074171,
             "spot": 5
         },
         {
             "airport1": "ewr",
             "airport2": "sfo",
             "airline": "United Airlines",
-            "total-revenue": 687674312,
+            "totalRevenue": 687674312,
             "spot": 6
         },
         {
             "airport1": "lhr",
             "airport2": "hkg",
             "airline": "Cathay Pacific Airways",
-            "total-revenue": 631855868,
+            "totalRevenue": 631855868,
             "spot": 7
         },
         {
             "airport1": "lhr",
             "airport2": "doh",
             "airline": "Qatar Airways",
-            "total-revenue": 552658316,
+            "totalRevenue": 552658316,
             "spot": 8
         },
         {
             "airport1": "yyz",
             "airport2": "yvr",
             "airline": "Air Canada",
-            "total-revenue": 552264972,
+            "totalRevenue": 552264972,
             "spot": 9
         },
         {
             "airport1": "sin",
             "airport2": "syd",
             "airline": "Singapore Airlines",
-            "total-revenue": 543723893,
+            "totalRevenue": 543723893,
             "spot": 10
         }
     ]

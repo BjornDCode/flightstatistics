@@ -1,6 +1,6 @@
 <template>
     <path 
-        v-if="airports" 
+        v-if="routeAirports" 
         :d="`
             M${coordinates.x1},${coordinates.y1} 
             A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
@@ -19,17 +19,21 @@
             route: {
                 type: Object,
                 required: true
+            },
+            airports: {
+                type: Array,
+                required: true
             }
         },
 
         data() {
             return {
-                airports: null
+                routeAirports: null
             }
         },
 
         mounted() {
-            this.airports = {
+            this.routeAirports = {
                 airport1: document.querySelector(`#${this.route.airport1}`),
                 airport2: document.querySelector(`#${this.route.airport2}`)
             }
@@ -37,15 +41,15 @@
 
         computed: {
             coordinates() {
-                if (!this.airports) {
+                if (!this.routeAirports) {
                     return null
                 }
 
                 return {
-                    x1: parseInt(this.airports.airport1.getAttribute('cx')),
-                    y1: parseInt(this.airports.airport1.getAttribute('cy')),
-                    x2: parseInt(this.airports.airport2.getAttribute('cx')),
-                    y2: parseInt(this.airports.airport2.getAttribute('cy'))
+                    x1: parseInt(this.routeAirports.airport1.getAttribute('cx')),
+                    y1: parseInt(this.routeAirports.airport1.getAttribute('cy')),
+                    x2: parseInt(this.routeAirports.airport2.getAttribute('cx')),
+                    y2: parseInt(this.routeAirports.airport2.getAttribute('cy'))
                 }
             },
 
@@ -68,12 +72,29 @@
                     x: ellipsisRadius,
                     y: ellipsisRadius
                 }
-            }
+            },
         },
 
         methods: {
             emitData() {
-                this.$emit('routeSelect', this.route)
+                this.$emit('routeSelect', {
+                    'Spot': `#${this.route.spot}`,
+                    'Route': `${this.getAirportName(this.route.airport1)} - ${this.getAirportName(this.route.airport2)}`,
+                    'Airline': this.route.airline,
+                    'Total Revenue': `${this.formatMoney(this.route.totalRevenue)}`
+                })
+            },
+
+            formatMoney(money) {
+                return new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 0
+                }).format(money)
+            },
+
+            getAirportName(airportCode) {
+                return this.airports.find(airport => airport.code === airportCode ).name
             }
         }
     })

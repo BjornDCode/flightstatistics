@@ -79,6 +79,7 @@
                 <route 
                     v-for="route in mostProfitableRoutes" 
                     :route="route"
+                    :airports="airports"
                     @routeSelect="emitData"
                 ></route>
             </g>
