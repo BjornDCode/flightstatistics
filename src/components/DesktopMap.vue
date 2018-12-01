@@ -77,19 +77,21 @@
 
             <g ref="mostProfitableRoutes">
                 <route 
-                    v-for="route in mostProfitableRoutes" 
+                    v-for="(route, i) in mostProfitableRoutes" 
                     :route="route"
                     :airports="airports"
                     :active="route === activeItem"
+                    :key="i"
                     @update="emitData"
                     @active="activeItem = $event"
                 ></route>
             </g>
             <g ref="airports" fill="#DE5A5A">
                 <airport 
-                    v-for="airport in airports" 
+                    v-for="(airport, i) in airports" 
                     :airport="airport"
                     :active="airport === activeItem"
+                    :key="i"
                     @update="emitData"
                     @active="activeItem = $event"
                 ></airport>
