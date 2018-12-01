@@ -4,6 +4,7 @@
             "name": "Melbourne Airport",
             "code": "mel",
             "city": "Melbourne",
+            "country": "Australia",
             "coordinates": {
                 "x": 1002,
                 "y": 484
@@ -13,6 +14,7 @@
             "name": "Sydney Airport",
             "code": "syd",
             "city": "Sydney",
+            "country": "Australia",
             "coordinates": {
                 "x": 1037,
                 "y": 464
@@ -22,6 +24,7 @@
             "name": "John F. Kennedy International Airport",
             "code": "jfk",
             "city": "New York City",
+            "country": "United States",
             "coordinates": {
                 "x": 248,
                 "y": 160
@@ -31,6 +34,7 @@
             "name": "Heathrow Airport",
             "code": "lhr",
             "city": "London",
+            "country": "United Kingdom",
             "coordinates": {
                 "x": 512,
                 "y": 112
@@ -40,6 +44,7 @@
             "name": "Dubai International Airport",
             "code": "dxb",
             "city": "Dubai",
+            "country": "United Arab Emirates",
             "coordinates": {
                 "x": 710,
                 "y": 227
@@ -49,6 +54,7 @@
             "name": "Singapore Changi Airport",
             "code": "sin",
             "city": "Singapore",
+            "country": "Singapore",
             "coordinates": {
                 "x": 905,
                 "y": 320
@@ -57,7 +63,8 @@
         {
             "name": "Los Angeles International Airport",
             "code": "lax",
-            "city": "Los Angelse",
+            "city": "Los Angeles",
+            "country": "United States",
             "coordinates": {
                 "x": 71,
                 "y": 184
@@ -67,6 +74,7 @@
             "name": "San Francisco International Airport",
             "code": "sfo",
             "city": "San Francisco",
+            "country": "United States",
             "coordinates": {
                 "x": 65,
                 "y": 165
@@ -76,6 +84,7 @@
             "name": "Newark Liberty International Airport",
             "code": "ewr",
             "city": "Newark",
+            "country": "United States",
             "coordinates": {
                 "x": 240,
                 "y": 160
@@ -85,6 +94,7 @@
             "name": "Hong Kong International Airport",
             "code": "hkg",
             "city": "Hong Kong",
+            "country": "Hong Kong",
             "coordinates": {
                 "x": 932,
                 "y": 233
@@ -94,6 +104,7 @@
             "name": "Hamad International Airport",
             "code": "doh",
             "city": "Doha",
+            "country": "Qatar",
             "coordinates": {
                 "x": 699,
                 "y": 221
@@ -103,6 +114,7 @@
             "name": "Vancouver International Airport",
             "code": "yvr",
             "city": "Vancouver",
+            "country": "Canada",
             "coordinates": {
                 "x": 96,
                 "y": 118
@@ -112,6 +124,7 @@
             "name": "Toronto Pearson International Airport",
             "code": "yyz",
             "city": "Toronto",
+            "country": "Canada",
             "coordinates": {
                 "x": 238,
                 "y": 139

@@ -28,7 +28,8 @@
                 this.$emit('update', {
                     'Airport': this.airport.name,
                     'Code': this.airport.code.toUpperCase(),
-                    'City': this.airport.city
+                    'City': this.airport.city,
+                    'Country': this.airport.country,
                 })
 
                 this.$emit('active', this.airport)
