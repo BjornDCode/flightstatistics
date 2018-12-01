@@ -1,11 +1,13 @@
 <template>
-    <circle 
-        :cx="airport.coordinates.x" 
-        :cy="airport.coordinates.y" 
-        :r="active ? 8 : 6" 
-        :id="airport.code" 
-        @mouseover="emitData"
-    />
+    <transition name="fade">
+        <circle 
+            :cx="airport.coordinates.x" 
+            :cy="airport.coordinates.y" 
+            :r="active ? 8 : 6" 
+            :id="airport.code" 
+            @mouseover="emitData"
+        />
+    </transition>
 </template>
 
 <script>
@@ -37,3 +39,13 @@
         }
     })
 </script>
+
+<style>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 400ms;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+</style>
