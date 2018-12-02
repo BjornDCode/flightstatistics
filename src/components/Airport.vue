@@ -1,7 +1,7 @@
 <template>
     <transition name="fade">
         <circle 
-            :fill="color"
+            fill="currentColor"
             :cx="airport.coordinates.x" 
             :cy="airport.coordinates.y" 
             :r="active ? 8 : 6" 
@@ -22,10 +22,6 @@
             },
             active: {
                 type: Boolean,
-                required: true
-            },
-            color: {
-                type: String,
                 required: true
             }
         },

@@ -80,7 +80,7 @@
                     v-for="(airport, i) in mostProfitableRoutes.airports" 
                     :airport="airport"
                     :active="airport === highlightedItem"
-                    color="#DE5A5A"
+                    class="text-red"
                     @update="emitData"
                     @active="highlightedItem = $event"
                 ></airport>
@@ -89,7 +89,7 @@
                     :route="route"
                     :airports="mostProfitableRoutes.airports"
                     :active="route === highlightedItem"
-                    color="#DE5A5A"
+                    class="text-red"
                     @update="emitData"
                     @active="highlightedItem = $event"
                 ></route>
@@ -99,7 +99,7 @@
                     v-for="(airport, i) in busiestRoutes.airports" 
                     :airport="airport"
                     :active="airport === highlightedItem"
-                    color="#DACF6D"
+                    class="text-yellow"
                     @update="emitData"
                     @active="highlightedItem = $event"
                 ></airport>
@@ -108,7 +108,7 @@
                     :route="route"
                     :airports="busiestRoutes.airports"
                     :active="route === highlightedItem"
-                    color="#DACF6D"
+                    class="text-yellow"
                     @update="emitData"
                     @active="highlightedItem = $event"
                 ></route>

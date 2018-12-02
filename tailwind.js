@@ -10,6 +10,10 @@ let colors = {
   'blue': '#495A7C', // Map
   'blue-lighter': '#6D80A7', // Dark blue text
   'blue-lightest': '#C2CFE8', // Light blue text
+
+  'red': '#DE5A5A',
+  'yellow': '#DACF6D',
+
 }
 
 module.exports = {

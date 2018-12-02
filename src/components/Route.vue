@@ -10,7 +10,7 @@
                 --pathlength: ${pathLength};
                 --duration: ${createRandomTransitionDuration()}ms;
             `"
-            :stroke="color"
+            stroke="currentColor"
             :stroke-width="active ? 5 : 3"
             :stroke-dasharray="pathLength"
             @mouseover="emitData"
@@ -33,10 +33,6 @@
             },
             active: {
                 type: Boolean,
-                required: true
-            },
-            color: {
-                type: String,
                 required: true
             }
         },
