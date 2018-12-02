@@ -75,8 +75,9 @@
                 <path class="text-blue-darkest hover:text-blue" fill="currentColor" id="new-zealand" d="M1100.35 494.349l7.113-7.114v-10.67l2.846-1.186v7.588l4.98 6.64-17.311 12.33 2.371-7.588zm-45.53 24.898l36.044-18.259v4.743l-27.745 18.258-8.3-4.742z" />
             </a>
 
-            <g v-if="dataset === 'mostProfitableRoutes'">
+            <g>
                 <airport 
+                    v-if="dataset === 'mostProfitableRoutes'"
                     v-for="(airport, i) in mostProfitableRoutes.airports" 
                     :airport="airport"
                     :active="airport === highlightedItem"
@@ -85,6 +86,7 @@
                     @active="highlightedItem = $event"
                 ></airport>
                 <route 
+                    v-if="dataset === 'mostProfitableRoutes'"
                     v-for="(route, i) in mostProfitableRoutes.routes" 
                     :route="route"
                     :airports="mostProfitableRoutes.airports"
@@ -94,8 +96,9 @@
                     @active="highlightedItem = $event"
                 ></route>
             </g>
-            <g v-if="dataset === 'busiestRoutes'">
+            <g>
                 <airport 
+                    v-if="dataset === 'busiestRoutes'"
                     v-for="(airport, i) in busiestRoutes.airports" 
                     :airport="airport"
                     :active="airport === highlightedItem"
@@ -104,6 +107,7 @@
                     @active="highlightedItem = $event"
                 ></airport>
                 <route 
+                    v-if="dataset === 'busiestRoutes'"
                     v-for="(route, i) in busiestRoutes.routes" 
                     :route="route"
                     :airports="busiestRoutes.airports"
