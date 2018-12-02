@@ -95,24 +95,15 @@
 
         methods: {
             emitData() {
-                this.$emit('update', {
-                    'Spot': `#${this.route.spot}`,
-                    'Route': `${this.getAirportName(this.route.airport1)} - ${this.getAirportName(this.route.airport2)}`,
-                    'Airline': this.route.airline,
-                    'Total Revenue': `${this.formatMoney(this.route.totalRevenue)}`
-                })
-
+                this.$emit('update', this.formatRouteText(this.route, this.airports))
                 this.$emit('active', this.route)
-            },
-
-            getAirportName(airportCode) {
-                return this.airports.find(airport => airport.code === airportCode ).name
             },
 
             createRandomTransitionDuration() {
                 return Math.floor(Math.random() * 2000)
-            }
-        }
+            },
+        },
+
     }
 </script>
 

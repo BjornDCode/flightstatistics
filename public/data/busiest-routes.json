@@ -5,70 +5,80 @@
             "airport2": "gmp",
             "totalPassengers": 13460306,
             "totalFlights": 65967,
-            "spot": 1
+            "spot": 1,
+            "type": "busiest"
         },
         {
             "airport1": "mel",
             "airport2": "syd",
             "totalPassengers": 9090941,
             "totalFlights": 54209,
-            "spot": 2
+            "spot": 2,
+            "type": "busiest"
         },
         {
             "airport1": "cts",
             "airport2": "hnd",
             "totalPassengers": 8726502,
             "totalFlights": 38717,
-            "spot": 3
+            "spot": 3,
+            "type": "busiest"
         },
         {
             "airport1": "fuk",
             "airport2": "hnd",
             "totalPassengers": 7864000,
             "totalFlights": 40106,
-            "spot": 4
+            "spot": 4,
+            "type": "busiest"
         },
         {
             "airport1": "bom",
             "airport2": "del",
             "totalPassengers": 7129943,
             "totalFlights": 47017,
-            "spot": 5
+            "spot": 5,
+            "type": "busiest"
         },
         {
             "airport1": "pek",
             "airport2": "sha",
             "totalPassengers": 6833684,
             "totalFlights": 30201,
-            "spot": 6
+            "spot": 6,
+            "type": "busiest"
         },
         {
             "airport1": "han",
             "airport2": "sgn",
             "totalPassengers": 6769823,
             "totalFlights": 39791,
-            "spot": 7
+            "spot": 7,
+            "type": "busiest"
         },
         {
             "airport1": "hkg",
             "airport2": "tpe",
             "totalPassengers": 6719030,
             "totalFlights": 28881,
-            "spot": 8
+            "spot": 8,
+            "type": "busiest"
         },
         {
             "airport1": "cgk",
             "airport2": "sub",
             "totalPassengers": 5271304,
             "totalFlights": 37214,
-            "spot": 9
+            "spot": 9,
+            "type": "busiest"
         },
         {
             "airport1": "hnd",
             "airport2": "oka",
             "totalPassengers": 5269481,
             "totalFlights": 22271,
-            "spot": 10
+            "spot": 10,
+            "type": "busiest"
         }
     ],
     "airports": [

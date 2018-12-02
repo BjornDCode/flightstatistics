@@ -5,70 +5,80 @@
             "airport2": "jfk",
             "airline": "British Airways",
             "totalRevenue": 1037724867,
-            "spot": 1
+            "spot": 1,
+            "type": "mostProfitable"
         },
         {
             "airport1": "syd",
             "airport2": "mel",
             "airline": "Qantas Airways",
             "totalRevenue": 854692402,
-            "spot": 2
+            "spot": 2,
+            "type": "mostProfitable"
         },
         {
             "airport1": "lhr",
             "airport2": "dxb",
             "airline": "Emirates",
             "totalRevenue": 819409702,
-            "spot": 3
+            "spot": 3,
+            "type": "mostProfitable"
         },
         {
             "airport1": "lhr",
             "airport2": "sin",
             "airline": "Singapore Airlines",
             "totalRevenue": 709730107,
-            "spot": 4
+            "spot": 4,
+            "type": "mostProfitable"
         },
         {
             "airport1": "jfk",
             "airport2": "lax",
             "airline": "American Airlines",
             "totalRevenue": 698074171,
-            "spot": 5
+            "spot": 5,
+            "type": "mostProfitable"
         },
         {
             "airport1": "ewr",
             "airport2": "sfo",
             "airline": "United Airlines",
             "totalRevenue": 687674312,
-            "spot": 6
+            "spot": 6,
+            "type": "mostProfitable"
         },
         {
             "airport1": "lhr",
             "airport2": "hkg",
             "airline": "Cathay Pacific Airways",
             "totalRevenue": 631855868,
-            "spot": 7
+            "spot": 7,
+            "type": "mostProfitable"
         },
         {
             "airport1": "lhr",
             "airport2": "doh",
             "airline": "Qatar Airways",
             "totalRevenue": 552658316,
-            "spot": 8
+            "spot": 8,
+            "type": "mostProfitable"
         },
         {
             "airport1": "yyz",
             "airport2": "yvr",
             "airline": "Air Canada",
             "totalRevenue": 552264972,
-            "spot": 9
+            "spot": 9,
+            "type": "mostProfitable"
         },
         {
             "airport1": "sin",
             "airport2": "syd",
             "airline": "Singapore Airlines",
             "totalRevenue": 543723893,
-            "spot": 10
+            "spot": 10,
+            "type": "mostProfitable"
         }
     ],
     "airports": [
