@@ -21,7 +21,7 @@
 <script>
     import Vue from 'vue'
 
-    export default Vue.extend({
+    export default {
         props: {
             route: {
                 type: Object,
@@ -119,7 +119,7 @@
                 return Math.floor(Math.random() * 2000)
             }
         }
-    })
+    }
 </script>
 
 <style>

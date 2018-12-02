@@ -18,12 +18,6 @@
                 type: Object,
                 required: false,
             }
-        },
-
-        computed: {
-            show() {
-                return !isEmpty(this.source)
-            }
         }
     }
 </script>
