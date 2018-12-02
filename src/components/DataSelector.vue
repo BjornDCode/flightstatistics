@@ -1,22 +1,21 @@
 <template>
     <ul class="absolute pin-b pin-r mb-8 mr-8 list-reset text-blue-lightest">
-        <li>
-            <input 
-                type="radio" 
-                name="dataset" 
-                :checked="currentlySelected === 'mostProfitableRoutes'"
-                value="mostProfitableRoutes"
-                @change="select"
-            > Most Profitable Routes
-        </li>
-        <li>
-            <input 
-                type="radio" 
-                name="dataset" 
-                :checked="currentlySelected === 'busiestRoutes'"
-                value="busiestRoutes"
-                @change="select"
-            > Busiest Routes
+        <li class="mb-2" v-for="dataset in datasets">
+            <label class="cursor-pointer flex items-center">
+                <input 
+                    type="radio" 
+                    name="dataset" 
+                    :checked="currentlySelected === dataset.key"
+                    :value="dataset.key"
+                    @change="select"
+                    class="hidden" 
+                >
+                <span 
+                    class="block w-4 h-4 rounded-full mr-2"
+                    :class="currentlySelected === dataset.key ? [`bg-${dataset.color}`] : [`border-2 border-${dataset.color}`]"
+                ></span>
+                {{ dataset.name }}
+            </label>
         </li>
     </ul>
 </template>
@@ -27,6 +26,23 @@
             currentlySelected: {
                 type: String,
                 required: true
+            }
+        },
+
+        data() {
+            return {
+                datasets: [
+                    { 
+                        key: 'mostProfitableRoutes', 
+                        name: 'Most Profitable Routes',
+                        color: 'red'
+                    },
+                    { 
+                        key: 'busiestRoutes', 
+                        name: 'Busiest Routes',
+                        color: 'yellow'
+                    }
+                ]
             }
         },
 
