@@ -19,6 +19,7 @@
 </template>
 
 <script>
+    import Formatter from '../mixins/Formatter'    
 
     export default {
         props: {
@@ -35,6 +36,8 @@
                 required: true
             }
         },
+
+        mixins: [ Formatter ],
 
         data() {
             return {
@@ -100,14 +103,6 @@
                 })
 
                 this.$emit('active', this.route)
-            },
-
-            formatMoney(money) {
-                return new Intl.NumberFormat('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                    minimumFractionDigits: 0
-                }).format(money)
             },
 
             getAirportName(airportCode) {
