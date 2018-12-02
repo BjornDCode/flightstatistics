@@ -1,5 +1,5 @@
 <template>
-    <transition name="fade">
+    <transition name="airport">
         <circle 
             fill="currentColor"
             :cx="airport.coordinates.x" 
@@ -40,11 +40,15 @@
 </script>
 
 <style>
-    .fade-enter-active, .fade-leave-active {
+    .airport-enter-active {
         transition: opacity 400ms;
     }
 
-    .fade-enter, .fade-leave-to {
+    .airport-leave-active {
+        transition: opacity 250ms;
+    }
+
+    .airport-enter, .airport-leave-to {
         opacity: 0;
     }
 </style>
