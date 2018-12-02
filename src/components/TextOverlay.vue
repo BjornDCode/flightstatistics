@@ -1,12 +1,12 @@
 <template>
-    <transition name="slide-up">
-        <ul v-show="show" class="list-reset absolute pin-b pin-l mb-8 ml-8">
-            <li v-for="(value, key) in source" :key="key" class="mt-4">
+    <ul class="list-reset absolute pin-b pin-l mb-8 ml-8">
+        <transition-group name="step-in">
+            <li v-for="(value, key, index) in source" :style="`transition-delay: ${150 * index}ms`" :key="key" class="mt-4">
                 <span class="text-blue-lighter text-xs uppercase">{{ key }}</span>
                 <p class="text-blue-lightest text-lg">{{ value }}</p>
             </li>
-        </ul>
-    </transition>
+        </transition-group>
+    </ul>
 </template>
 
 <script>
@@ -29,11 +29,11 @@
 </script>
 
 <style>
-    .slide-up-enter-active, .slide-up-leave-active {
-        transition: all 200ms;
+    .step-in-enter-active {
+        transition: all 150ms;
     }
-    .slide-up-enter, .slide-up-leave-to {
+    .step-in-enter, .step-in-leave-to {
         @apply opacity-0;
-        transform: translateY(-2rem);
+        transform: translateX(-2rem);
     }
 </style>
