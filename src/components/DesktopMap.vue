@@ -75,59 +75,44 @@
                 <path class="text-blue-darkest hover:text-blue" fill="currentColor" id="new-zealand" d="M1100.35 494.349l7.113-7.114v-10.67l2.846-1.186v7.588l4.98 6.64-17.311 12.33 2.371-7.588zm-45.53 24.898l36.044-18.259v4.743l-27.745 18.258-8.3-4.742z" />
             </a>
 
-            <g ref="mostProfitableRoutes">
-                <route 
-                    v-for="(route, i) in mostProfitableRoutes" 
-                    :route="route"
-                    :airports="airports"
-                    :active="route === activeItem"
-                    :key="i"
+            <g v-if="activeData === 'mostProfitableRoutes'">
+                <airport 
+                    v-for="(airport, i) in mostProfitableRoutes.airports" 
+                    :airport="airport"
+                    :active="airport === highlightedItem"
+                    color="#DE5A5A"
                     @update="emitData"
-                    @active="activeItem = $event"
+                    @active="highlightedItem = $event"
+                ></airport>
+                <route 
+                    v-for="(route, i) in mostProfitableRoutes.routes" 
+                    :route="route"
+                    :airports="mostProfitableRoutes.airports"
+                    :active="route === highlightedItem"
+                    color="#DE5A5A"
+                    @update="emitData"
+                    @active="highlightedItem = $event"
                 ></route>
             </g>
-            <g ref="airports" fill="#DE5A5A">
+            <g v-if="activeData === 'busiestRoutes'">
                 <airport 
-                    v-for="(airport, i) in airports" 
+                    v-for="(airport, i) in busiestRoutes.airports" 
                     :airport="airport"
-                    :active="airport === activeItem"
-                    :key="i"
+                    :active="airport === highlightedItem"
+                    color="#DACF6D"
                     @update="emitData"
-                    @active="activeItem = $event"
+                    @active="highlightedItem = $event"
                 ></airport>
+                <route 
+                    v-for="(route, i) in busiestRoutes.routes" 
+                    :route="route"
+                    :airports="busiestRoutes.airports"
+                    :active="route === highlightedItem"
+                    color="#DACF6D"
+                    @update="emitData"
+                    @active="highlightedItem = $event"
+                ></route>
             </g>
-            <!--
-            <g transform="translate(59 106)" fill="#DE5A5A">
-                <circle cx="453" cy="6" r="6" id="lhr" />
-                <circle cx="651" cy="121" r="6" id="dxb" />
-                <circle cx="640" cy="115" r="6" id="doh" />
-                <circle cx="846" cy="214" r="6" id="sin" />
-                <circle cx="855" cy="246" r="6" id="cgk" />
-                <circle cx="879" cy="249" r="6" id="jia" />
-                <circle cx="841" cy="129" r="6" id="han" />
-                <circle cx="854" cy="175" r="6" id="sgn" />
-                <circle cx="723" cy="143" r="6" id="bom" />
-                <circle cx="730" cy="107" r="6" id="del" />
-                <circle cx="909" cy="86" r="6" id="cju" />
-                <circle cx="903" cy="66" r="6" id="gmp" />
-                <circle cx="860" cy="49" r="6" id="pek" />
-                <circle cx="891" cy="98" r="6" id="sha" />
-                <circle cx="900" cy="116" r="6" id="tpe" />
-                <circle cx="918" cy="106" r="6" id="oka" />
-                <circle cx="937" cy="45" r="6" id="cts" />
-                <circle cx="950" cy="71" r="6" id="hnd" />
-                <circle cx="937" cy="78" r="6" id="itm" />
-                <circle cx="923" cy="80" r="6" id="fuk" />
-                <circle cx="12" cy="78" r="6" id="lax" />
-                <circle cx="6" cy="59" r="6" id="sfo" />
-                <circle cx="37" cy="12" r="6" id="yvr" />
-                <circle cx="978" cy="359" r="6" id="syd" />
-                <circle cx="943" cy="378" r="6" id="mel" />
-                <circle cx="189" cy="53" r="6" id="jfk" />
-                <circle cx="181" cy="54" r="6" id="ewr" />
-                <circle cx="179" cy="33" r="6" id="yyz" />
-            </g>
-        -->
         </g>
     </svg>
 </template>
@@ -139,9 +124,16 @@
     export default {
         data() {
             return {
-                airports: [],
-                mostProfitableRoutes: [],
-                activeItem: null
+                mostProfitableRoutes: {
+                    routes: [],
+                    airports: []
+                },
+                busiestRoutes: {
+                    routes: [],
+                    airports: []
+                },
+                activeData: 'mostProfitableRoutes',
+                highlightedItem: null
             }
         },
 
@@ -151,12 +143,18 @@
         },
 
         mounted() {
-            this.loadData('/data/airports.json', data => {
-                this.airports = data.airports
+            this.loadData('/data/most-profitable-routes.json', data => {
+                this.mostProfitableRoutes = {
+                    routes: data.routes,
+                    airports: data.airports
+                }
             })
 
-            this.loadData('/data/most-profitable-routes.json', data => {
-                this.mostProfitableRoutes = data.routes
+            this.loadData('/data/busiest-routes.json', data => {
+                this.busiestRoutes = {
+                    routes: data.routes,
+                    airports: data.airports
+                }
             })
         },
 
