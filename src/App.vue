@@ -8,8 +8,12 @@
         </ir-screen-sm>
         <ir-screen-md>
             <div class="w-full h-screen flex justify-center items-center">
-                <desktop-map @update="textSource = $event"></desktop-map>
+                <desktop-map 
+                    :dataset="dataset"
+                    @update="textSource = $event"
+                ></desktop-map>
                 <text-overlay :source="textSource"></text-overlay>
+                <data-selector @select="dataset = $event" :currently-selected="dataset"></data-selector>
             </div>
         </ir-screen-md>
     </div>
@@ -20,6 +24,7 @@
     import OrientationNotice from './components/OrientationNotice'
     import DesktopMap from './components/DesktopMap'
     import TextOverlay from './components/TextOverlay'
+    import DataSelector from './components/DataSelector'
 
     export default {
         components: {
@@ -27,11 +32,13 @@
             OrientationNotice,
             DesktopMap,
             TextOverlay,
+            DataSelector
         },
 
         data() {
             return {
-                textSource: {}
+                textSource: {},
+                dataset: 'mostProfitableRoutes'
             }
         }
     }
