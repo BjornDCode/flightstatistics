@@ -1,0 +1,256 @@
+{
+    "routes": [
+        {
+            "airport1": "cju",
+            "airport2": "gmp",
+            "totalPassengers": 13460306,
+            "totalFlights": 65967,
+            "spot": 1
+        },
+        {
+            "airport1": "mel",
+            "airport2": "syd",
+            "totalPassengers": 9090941,
+            "totalFlights": 54209,
+            "spot": 2
+        },
+        {
+            "airport1": "cts",
+            "airport2": "hnd",
+            "totalPassengers": 8726502,
+            "totalFlights": 38717,
+            "spot": 3
+        },
+        {
+            "airport1": "fuk",
+            "airport2": "hnd",
+            "totalPassengers": 7864000,
+            "totalFlights": 40106,
+            "spot": 4
+        },
+        {
+            "airport1": "bom",
+            "airport2": "del",
+            "totalPassengers": 7129943,
+            "totalFlights": 47017,
+            "spot": 5
+        },
+        {
+            "airport1": "pek",
+            "airport2": "sha",
+            "totalPassengers": 6833684,
+            "totalFlights": 30201,
+            "spot": 6
+        },
+        {
+            "airport1": "han",
+            "airport2": "sgn",
+            "totalPassengers": 6769823,
+            "totalFlights": 39791,
+            "spot": 7
+        },
+        {
+            "airport1": "hkg",
+            "airport2": "tpe",
+            "totalPassengers": 6719030,
+            "totalFlights": 28881,
+            "spot": 8
+        },
+        {
+            "airport1": "cgk",
+            "airport2": "sub",
+            "totalPassengers": 5271304,
+            "totalFlights": 37214,
+            "spot": 9
+        },
+        {
+            "airport1": "hnd",
+            "airport2": "oka",
+            "totalPassengers": 5269481,
+            "totalFlights": 22271,
+            "spot": 10
+        }
+    ],
+    "airports": [
+        {
+            "name": "Taoyuan International Airport",
+            "code": "tpe",
+            "city": "Taipei",
+            "country": "Taiwan",
+            "coordinates": {
+                "x": 959,
+                "y": 222
+            }
+        },
+        {
+            "name": "Soekarno–Hatta International Airport",
+            "code": "cgk",
+            "city": "Jakarta",
+            "country": "Indonesia",
+            "coordinates": {
+                "x": 914,
+                "y": 352
+            }
+        },
+        {
+            "name": "Juanda International Airport",
+            "code": "sub",
+            "city": "Surabaya",
+            "country": "Indonesia",
+            "coordinates": {
+                "x": 938,
+                "y": 355
+            }
+        },
+        {
+            "name": "Naha Airport",
+            "code": "oka",
+            "city": "Naha",
+            "country": "Japan",
+            "coordinates": {
+                "x": 977,
+                "y": 212
+            }
+        },
+        {
+            "name": "Chhatrapati Shivaji Maharaj International Airport",
+            "code": "bom",
+            "city": "Mumbai",
+            "country": "India",
+            "coordinates": {
+                "x": 782,
+                "y": 249
+            }
+        },
+        {
+            "name": "Indira Gandhi International Airport",
+            "code": "del",
+            "city": "Delhi",
+            "country": "India",
+            "coordinates": {
+                "x": 789,
+                "y": 213
+            }
+        },
+        {
+            "name": "Beijing Capital International Airport",
+            "code": "pek",
+            "city": "Beijing",
+            "country": "China",
+            "coordinates": {
+                "x": 919,
+                "y": 155
+            }
+        },
+        {
+            "name": "Shanghai Hongqiao International Airport",
+            "code": "sha",
+            "city": "Shanghai",
+            "country": "China",
+            "coordinates": {
+                "x": 950,
+                "y": 204
+            }
+        },
+        {
+            "name": "Noi Bai International Airport",
+            "code": "han",
+            "city": "Hanoi",
+            "country": "Vietnam",
+            "coordinates": {
+                "x": 900,
+                "y": 235
+            }
+        },
+        {
+            "name": "Tan Son Nhat International Airport",
+            "code": "sgn",
+            "city": "Ho Chi Minh City",
+            "country": "Vietnam",
+            "coordinates": {
+                "x": 913,
+                "y": 281
+            }
+        },
+        {
+            "name": "Jeju International Airport",
+            "code": "cju",
+            "city": "Jeju",
+            "country": "South Korea",
+            "coordinates": {
+                "x": 968,
+                "y": 192
+            }
+        },
+        {
+            "name": "Gimpo International Airport",
+            "code": "gmp",
+            "city": "Seoul",
+            "country": "South Korea",
+            "coordinates": {
+                "x": 962,
+                "y": 172
+            }
+        },
+        {
+            "name": "New Chitose Airport",
+            "code": "cts",
+            "city": "Sapporo",
+            "country": "Japan",
+            "coordinates": {
+                "x": 996,
+                "y": 151
+            }
+        },
+        {
+            "name": "Haneda Airport",
+            "code": "hnd",
+            "city": "Tokyo",
+            "country": "Japan",
+            "coordinates": {
+                "x": 1009,
+                "y": 177
+            }
+        },
+        {
+            "name": "Fukuoka Airport",
+            "code": "fuk",
+            "city": "Fukuoka",
+            "country": "Japan",
+            "coordinates": {
+                "x": 982,
+                "y": 186
+            }
+        },        
+        {
+            "name": "Melbourne Airport",
+            "code": "mel",
+            "city": "Melbourne",
+            "country": "Australia",
+            "coordinates": {
+                "x": 1002,
+                "y": 484
+            }
+        },
+        {
+            "name": "Sydney Airport",
+            "code": "syd",
+            "city": "Sydney",
+            "country": "Australia",
+            "coordinates": {
+                "x": 1037,
+                "y": 464
+            }
+        },
+        {
+            "name": "Hong Kong International Airport",
+            "code": "hkg",
+            "city": "Hong Kong",
+            "country": "Hong Kong",
+            "coordinates": {
+                "x": 932,
+                "y": 233
+            }
+        }
+    ]
+}
