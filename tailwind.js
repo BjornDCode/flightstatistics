@@ -4,6 +4,7 @@ let colors = {
   'transparent': 'transparent',
 
   'black': '#22292f',
+  'black-transparent': 'rgba(0,0,0, 0.5)',
   'white': '#ffffff',
 
   'blue-darkest': '#1E2C4B', // BG

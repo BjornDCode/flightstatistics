@@ -14,6 +14,7 @@
                     @update="textSource = $event"
                 ></desktop-map>
                 <text-overlay :source="textSource"></text-overlay>
+                <meta-info></meta-info>
                 <data-selector @select="dataset = $event" :currently-selected="dataset"></data-selector>
             </div>
         </ir-screen-md>
@@ -27,6 +28,7 @@
     import TextOverlay from './components/TextOverlay'
     import DataSelector from './components/DataSelector'
     import MapTitle from './components/MapTitle'
+    import MetaInfo from './components/MetaInfo'
 
     export default {
         components: {
@@ -35,7 +37,8 @@
             DesktopMap,
             TextOverlay,
             DataSelector,
-            MapTitle
+            MapTitle,
+            MetaInfo
         },
 
         data() {
