@@ -97,12 +97,12 @@
                 this.$emit('active', this.route)
             },
 
-            createRandomTransitionDuration() {
-                return Math.floor(Math.random() * 2)
+            createRandomTransitionDuration(min, max) {
+                return (Math.random() * (max - min) + min) / 1000
             },
 
             enterTransition(el, done) {
-                TweenLite.to(el, this.createRandomTransitionDuration(), {
+                TweenLite.to(el, this.createRandomTransitionDuration(500, 2000), {
                     strokeDashoffset: 0,
                     onComplete() {
                         done()
