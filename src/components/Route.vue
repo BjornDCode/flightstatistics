@@ -111,7 +111,6 @@
             },
 
             leaveTransition(el, done) {
-                console.log(this.pathLength)
                 TweenLite.to(el, 0.25, {
                     strokeDashoffset: this.pathLength,
                     onComplete() {
