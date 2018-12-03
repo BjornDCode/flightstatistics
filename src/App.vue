@@ -8,6 +8,7 @@
         </ir-screen-sm>
         <ir-screen-md>
             <div class="w-full h-screen flex justify-center items-center">
+                <map-title :dataset="dataset"></map-title>
                 <desktop-map 
                     :dataset="dataset"
                     @update="textSource = $event"
@@ -25,6 +26,7 @@
     import DesktopMap from './components/DesktopMap'
     import TextOverlay from './components/TextOverlay'
     import DataSelector from './components/DataSelector'
+    import MapTitle from './components/MapTitle'
 
     export default {
         components: {
@@ -32,7 +34,8 @@
             OrientationNotice,
             DesktopMap,
             TextOverlay,
-            DataSelector
+            DataSelector,
+            MapTitle
         },
 
         data() {
