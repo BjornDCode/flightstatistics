@@ -7,7 +7,7 @@
                 :key="dataset.key"
                 :style="`transition-delay: ${150 * index}ms`"
             >
-                <label class="cursor-pointer flex items-center">
+                <label class="cursor-pointer flex items-center group">
                     <input 
                         type="radio" 
                         name="dataset" 
@@ -17,8 +17,7 @@
                         class="hidden" 
                     >
                     <span 
-                        class="block w-4 h-4 rounded-full mr-2"
-                        :class="currentlySelected === dataset.key ? [`bg-${dataset.color}`] : [`border-2 border-${dataset.color}`]"
+                        :class="[`block w-4 h-4 rounded-full transition-100 group-hover:border-4 border-${dataset.color} mr-2`, currentlySelected === dataset.key ? `bg-${dataset.color}` : `border-2`]"
                     ></span>
                     {{ dataset.name }}
                 </label>

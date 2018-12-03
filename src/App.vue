@@ -58,5 +58,9 @@
         .w-80 {
             width: 80%;
         }
+
+        .transition-100 {
+            transition: all 100ms;
+        }
     }
 </style>
