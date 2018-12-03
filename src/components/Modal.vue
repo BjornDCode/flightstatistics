@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button type="button" @click="openModal">
+        <button type="button" @click="openModal" class="text-blue-lighter text-xs uppercase mx-2">
             {{ title }}
         </button> 
         <ir-focus-trap :active="open">

@@ -7,14 +7,14 @@
             <mobile-notice></mobile-notice>
         </ir-screen-sm>
         <ir-screen-md>
-            <div class="w-full h-screen flex justify-center items-center">
+            <div class="w-full h-screen flex flex-col justify-between items-center">
                 <map-title :dataset="dataset"></map-title>
                 <desktop-map 
                     :dataset="dataset"
                     @update="textSource = $event"
                 ></desktop-map>
-                <text-overlay :source="textSource"></text-overlay>
                 <meta-info></meta-info>
+                <text-overlay :source="textSource"></text-overlay>
                 <data-selector @select="dataset = $event" :currently-selected="dataset"></data-selector>
             </div>
         </ir-screen-md>

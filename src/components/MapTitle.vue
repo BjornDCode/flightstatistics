@@ -1,9 +1,11 @@
 <template>
-    <transition name="slide-fade" appear>
-        <h1 class="absolute pin-t mt-8 text-blue-lightest" :key="Date.now()">
-            {{ title }}
-        </h1>
-    </transition>
+    <div class="w-full h-16">
+        <transition name="slide-fade" appear>
+            <h1 class="w-full absolute text-center pin-t mt-8 text-blue-lightest" :key="Date.now()">
+                {{ title }}
+            </h1>
+        </transition>
+    </div>
 </template>
 
 <script>
