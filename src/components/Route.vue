@@ -5,6 +5,7 @@
                 M${coordinates.x1},${coordinates.y1} 
                 A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
             `"
+            style="transition: stroke-width 200ms;"
             stroke="currentColor"
             stroke-linecap="round"
             :stroke-width="active ? 5 : 3"
