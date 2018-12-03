@@ -63,4 +63,8 @@
             transition: all 100ms;
         }
     }
+
+    ::selection {
+        @apply bg-blue-lightest text-blue-darkest;
+    }
 </style>
