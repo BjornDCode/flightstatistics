@@ -1,24 +1,22 @@
 <template>
-    <transition name="route" appear>        
+    <transition @enter="enterTransition" @leave="leaveTransition">        
         <path 
-            v-if="routeAirports" 
             :d="`
                 M${coordinates.x1},${coordinates.y1} 
                 A${controlPoint.x},${controlPoint.y} 0 0 ${sweep} ${coordinates.x2},${coordinates.y2}
             `"
-            :style="`
-                --pathlength: ${pathLength};
-                --duration: ${createRandomTransitionDuration()}ms;
-            `"
             stroke="currentColor"
+            stroke-linecap="round"
             :stroke-width="active ? 5 : 3"
             :stroke-dasharray="pathLength"
+            :stroke-dashoffset="pathLength"
             @mouseover="emitData"
         ></path>
     </transition>
 </template>
 
 <script>
+    import { TweenLite } from 'gsap'
     import Formatter from '../mixins/Formatter'    
 
     export default {
@@ -42,7 +40,7 @@
         data() {
             return {
                 routeAirports: null,
-                pathLength: "0"
+                pathLength: 0
             }
         },
 
@@ -60,7 +58,7 @@
         computed: {
             coordinates() {
                 if (!this.routeAirports) {
-                    return null
+                    return { x1: 0, y1: 1, x2: 0, y2: 0 }
                 }
 
                 return {
@@ -90,7 +88,7 @@
                     x: ellipsisRadius,
                     y: ellipsisRadius
                 }
-            },
+            }
         },
 
         methods: {
@@ -100,19 +98,27 @@
             },
 
             createRandomTransitionDuration() {
-                return Math.floor(Math.random() * 2000)
+                return Math.floor(Math.random() * 2)
             },
-        },
 
+            enterTransition(el, done) {
+                TweenLite.to(el, this.createRandomTransitionDuration(), {
+                    strokeDashoffset: 0,
+                    onComplete() {
+                        done()
+                    }
+                }) 
+            },
+
+            leaveTransition(el, done) {
+                console.log(this.pathLength)
+                TweenLite.to(el, 0.25, {
+                    strokeDashoffset: this.pathLength,
+                    onComplete() {
+                        done()
+                    }
+                })
+            }
+        }
     }
 </script>
-
-<style>
-    .route-enter-active, .route-leave-active {
-        transition: stroke-dashoffset var(--duration);
-    }
-
-    .route-enter, .route-leave-to {
-        stroke-dashoffset: var(--pathlength);
-    }
-</style>
