@@ -43,6 +43,12 @@
                 textSource: {},
                 dataset: 'mostProfitableRoutes'
             }
+        },
+
+        watch: {
+            dataset() {
+                this.textSource = {}
+            }
         }
     }
 </script>
