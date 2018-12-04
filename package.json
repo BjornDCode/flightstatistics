@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "gsap": "^2.0.2",
-    "iridium-vue": "^0.2.3",
+    "iridium-vue": "^0.3.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
