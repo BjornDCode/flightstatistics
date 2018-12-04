@@ -4,14 +4,16 @@
             <orientation-notice></orientation-notice>
         </ir-screen-md>
         <ir-screen-sm direction="down">
-            <div class="w-full h-screen flex flex-col justify-center items-center">
+            <div class="w-full h-screen flex flex-col justify-end items-center">
                 <mobile-notice></mobile-notice>
                 <mobile-text-overlay :source="textSource"></mobile-text-overlay>
                 <map-title :dataset="dataset"></map-title>
+                <mobile-navigation :dataset="dataset" @select="dataset = $event"></mobile-navigation>
                 <world-map 
                     :dataset="dataset"
                     @update="textSource = $event"
                 ></world-map>
+                <meta-info></meta-info>
             </div>
         </ir-screen-sm>
         <ir-screen-md>
@@ -38,6 +40,7 @@
     import MapTitle from './components/MapTitle'
     import MetaInfo from './components/MetaInfo'
     import MobileTextOverlay from './components/MobileTextOverlay'
+    import MobileNavigation from './components/MobileNavigation'
 
     export default {
         components: {
@@ -48,7 +51,8 @@
             DataSelector,
             MapTitle,
             MetaInfo,
-            MobileTextOverlay
+            MobileTextOverlay,
+            MobileNavigation
         },
 
         data() {

@@ -5,7 +5,7 @@
             slot-scope="{ open, openModal }"
             type="button" 
             @click="openModal" 
-            class="text-blue-lighter text-xs uppercase mx-2"
+            class="text-blue-lighter text-normal uppercase mx-2 md:text-xs"
         >
             {{ title }}
         </button> 
@@ -17,7 +17,7 @@
             @click.self="closeModal"
         >
             <transition name="zoom-fade">
-                <div v-show="open" class="bg-blue text-blue-lightest w-2/5 p-4 rounded">
+                <div v-show="open" class="bg-blue text-blue-lightest w-full mx-4 md:mx-0 md:w-2/5 p-4 rounded">
                     <header class="flex justify-between items-center mb-4">
                         <h2>{{ title }}</h2>
                         <button type="button" @click="closeModal" class="w-6">

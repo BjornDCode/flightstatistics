@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex mb-8">
+    <nav class="my-4 flex md:mt-0 md:mb-8">
         <modal title="About">
             <div slot="text">
                 <p class="leading-normal mb-4">

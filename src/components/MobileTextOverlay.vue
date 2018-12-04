@@ -15,7 +15,7 @@
             class="absolute z-30 pin bg-black-transparent"
             @click.self="toggle"
         >
-            <ir-transition-slide-right>
+            <transition name="slide-left">
                 <div v-show="open" class="w-1/2 h-full p-4 bg-blue-darkest">
                     <button @click="toggle" class="mb-4">
                         <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
@@ -26,7 +26,7 @@
                         <span v-else class="text-blue-lightest leading-normal">Select a route or airport by clicking on it. The details will show up here.</span>
                     </div>
                 </div>
-            </ir-transition-slide-right>
+            </transition>
         </div>
     </ir-hamburger-nav>
 </template>
@@ -53,3 +53,12 @@ export default {
     }
 }
 </script>
+
+<style>
+    .slide-left-enter-active, .slide-left-leave-active {
+        transition: transform 200ms;
+    }
+    .slide-left-enter, .slide-left-leave-to {
+        transform: translateX(-80%);
+    }
+</style>

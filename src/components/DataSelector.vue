@@ -1,5 +1,5 @@
 <template>
-    <ul class="absolute pin-b pin-r mb-8 mr-8 list-reset text-blue-lightest">
+    <ul class="md:absolute md:pin-b md:pin-r md:mb-8 md:mr-8 list-reset text-blue-lightest">
         <transition-step-in appear>
             <li 
                 class="mb-2" 
