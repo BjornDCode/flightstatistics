@@ -8,7 +8,13 @@
                 </g>
             </svg>
         </button>
-        <div slot="content" slot-scope="{ open, toggle }" v-show="open" class="absolute z-30 pin bg-black-transparent">
+        <div 
+            slot="content" 
+            slot-scope="{ open, toggle }" 
+            v-show="open" 
+            class="absolute z-30 pin bg-black-transparent"
+            @click.self="toggle"
+        >
             <ir-transition-slide-right>
                 <div v-show="open" class="w-1/2 h-full p-4 bg-blue-darkest">
                     <button @click="toggle" class="mb-4">

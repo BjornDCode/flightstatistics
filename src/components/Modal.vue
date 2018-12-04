@@ -1,5 +1,5 @@
 <template>
-    <ir-modal :use-portal="false">
+    <ir-modal :use-portal="false" :key="Date.now()">
         <button 
             slot="toggle"
             slot-scope="{ open, openModal }"
@@ -14,6 +14,7 @@
             slot-scope="{ open, closeModal }" 
             v-show="open"
             class="absolute pin bg-black-transparent flex justify-center items-center"
+            @click.self="closeModal"
         >
             <transition name="zoom-fade">
                 <div v-show="open" class="bg-blue text-blue-lightest w-2/5 p-4 rounded">
