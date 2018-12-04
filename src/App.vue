@@ -32,15 +32,16 @@
 </template>
 
 <script>
-    import MobileNotice from './components/MobileNotice'
-    import OrientationNotice from './components/OrientationNotice'
-    import WorldMap from './components/WorldMap'
-    import TextOverlay from './components/TextOverlay'
-    import DataSelector from './components/DataSelector'
-    import MapTitle from './components/MapTitle'
-    import MetaInfo from './components/MetaInfo'
-    import MobileTextOverlay from './components/MobileTextOverlay'
-    import MobileNavigation from './components/MobileNavigation'
+    import WorldMap from './components/map/WorldMap'
+    import TextOverlay from './components/overlays/TextOverlay'
+    import DataSelector from './components/overlays/DataSelector'
+    import MapTitle from './components/overlays/MapTitle'
+    import MetaInfo from './components/overlays/MetaInfo'
+
+    import OrientationNotice from './components/mobile/OrientationNotice'
+    import MobileNotice from './components/mobile/MobileNotice'
+    import MobileTextOverlay from './components/mobile/MobileTextOverlay'
+    import MobileNavigation from './components/mobile/MobileNavigation'
 
     export default {
         components: {

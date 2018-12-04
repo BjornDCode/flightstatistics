@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import DataSelector from './DataSelector'
-import MetaInfo from './MetaInfo'
+import DataSelector from '../overlays/DataSelector'
+import MetaInfo from '../overlays/MetaInfo'
 import { isEmpty } from 'lodash'
 
 export default {

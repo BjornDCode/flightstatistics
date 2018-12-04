@@ -31,7 +31,7 @@
     </ir-hamburger-nav>
 </template>
 <script>
-import TextOverlay from './TextOverlay'
+import TextOverlay from '../overlays/TextOverlay'
 import { isEmpty } from 'lodash'
 
 export default {

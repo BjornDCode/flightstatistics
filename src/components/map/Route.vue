@@ -18,7 +18,7 @@
 
 <script>
     import { TweenLite } from 'gsap'
-    import Formatter from '../mixins/Formatter'    
+    import Formatter from '../../mixins/Formatter'    
 
     export default {
         props: {

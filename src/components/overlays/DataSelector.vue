@@ -1,6 +1,6 @@
 <template>
     <ul class="md:absolute md:pin-b md:pin-r md:mb-8 md:mr-8 list-reset text-blue-lightest">
-        <transition-step-in appear>
+        <transition-group name="step-in" appear>
             <li 
                 class="mb-2" 
                 v-for="(dataset, index) in datasets" 
@@ -22,7 +22,7 @@
                     {{ dataset.name }}
                 </label>
             </li>
-        </transition-step-in>
+        </transition-group>
     </ul>
 </template>
 
@@ -59,3 +59,13 @@
         }
     }
 </script>
+
+<style>
+    .step-in-enter-active {
+        transition: all 150ms;
+    }
+    .step-in-enter, .step-in-leave-to {
+        @apply opacity-0;
+        transform: translateX(-2rem);
+    }
+</style>
