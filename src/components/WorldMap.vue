@@ -1,5 +1,5 @@
 <template>
-    <svg class="w-80" viewBox="0 0 1116 556" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-4/5" viewBox="0 0 1116 556" xmlns="http://www.w3.org/2000/svg">
         <g fill-rule="nonzero" fill="none">
             <path class="text-blue" fill="currentColor" d="M613.039 451.193l-3.32 3.462h-5.597v-5.098l4.34-2.798h4.577z" />
             <path class="text-blue" fill="currentColor" d="M622.643 436.255v5.027l-4.269-2.561v-3.913h4.269v-14.156h-10.909l-25.942 17.381-6.379-7.327V445.1h-15.77l9.154 25.064h30.045l23.12-26.747 1.044-7.232-4.363.07zM215.72 153.135l5.976-4.077h7.21l-5.953 4.077z" />

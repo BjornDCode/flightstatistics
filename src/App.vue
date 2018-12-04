@@ -4,15 +4,22 @@
             <orientation-notice></orientation-notice>
         </ir-screen-md>
         <ir-screen-sm direction="down">
-            <mobile-notice></mobile-notice>
+            <div class="w-full h-screen flex flex-col justify-center items-center">
+                <mobile-notice></mobile-notice>
+                <map-title :dataset="dataset"></map-title>
+                <world-map 
+                    :dataset="dataset"
+                    @update="textSource = $event"
+                ></world-map>
+            </div>
         </ir-screen-sm>
         <ir-screen-md>
             <div class="w-full h-screen flex flex-col justify-between items-center">
                 <map-title :dataset="dataset"></map-title>
-                <desktop-map 
+                <world-map 
                     :dataset="dataset"
                     @update="textSource = $event"
-                ></desktop-map>
+                ></world-map>
                 <meta-info></meta-info>
                 <text-overlay :source="textSource"></text-overlay>
                 <data-selector @select="dataset = $event" :currently-selected="dataset"></data-selector>
@@ -24,7 +31,7 @@
 <script>
     import MobileNotice from './components/MobileNotice'
     import OrientationNotice from './components/OrientationNotice'
-    import DesktopMap from './components/DesktopMap'
+    import WorldMap from './components/WorldMap'
     import TextOverlay from './components/TextOverlay'
     import DataSelector from './components/DataSelector'
     import MapTitle from './components/MapTitle'
@@ -34,7 +41,7 @@
         components: {
             MobileNotice,
             OrientationNotice,
-            DesktopMap,
+            WorldMap,
             TextOverlay,
             DataSelector,
             MapTitle,
@@ -67,9 +74,6 @@
     @tailwind utilities;
 
     @responsive {
-        .w-80 {
-            width: 80%;
-        }
 
         .transition-100 {
             transition: all 100ms;

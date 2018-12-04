@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full h-16">
+    <div class="w-full md:h-16">
         <transition name="slide-fade" appear>
-            <h1 class="w-full absolute text-center pin-t mt-8 text-blue-lightest" :key="Date.now()">{{ title }}</h1>
+            <h1 class="text-xl md:text-3xl w-full absolute text-center pin-t mt-4 md:mt-8 text-blue-lightest z-10" :key="Date.now()">{{ title }}</h1>
         </transition>
     </div>
 </template>
