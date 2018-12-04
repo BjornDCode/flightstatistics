@@ -17,7 +17,7 @@
             @click.self="closeModal"
         >
             <transition name="zoom-fade">
-                <div v-show="open" class="bg-blue text-blue-lightest w-full mx-4 md:mx-0 md:w-2/5 p-4 rounded">
+                <div v-show="open" class="bg-blue text-blue-lightest h-full w-full md:h-auto md:w-2/5 p-4 md:rounded z-40">
                     <header class="flex justify-between items-center mb-4">
                         <h2>{{ title }}</h2>
                         <button type="button" @click="closeModal" class="w-6">
