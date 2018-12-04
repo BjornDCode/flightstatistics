@@ -1,7 +1,7 @@
 <template>
     <nav class="flex mb-8">
         <modal title="About">
-            <div slot="content">
+            <div slot="text">
                 <p class="leading-normal mb-4">
                     This website is primarily an experiment. I made it to play around with Vue and SVG's. To find out where the data comes from click on 'Sources' at the bottom of the page. Since the site is an experient it's not meant to be extremely strict or accurate about the data. The data has been chosen because it provided an interesting way to play around with the data visualisation. 
                 </p>
@@ -16,7 +16,7 @@
             </div>
         </modal>
         <modal title="Sources">
-            <div slot="content" >
+            <div slot="text" >
                 <ul class="list-reset">
                     <li class="leading-normal">
                         <span>Most Profitable Routes: </span> 
