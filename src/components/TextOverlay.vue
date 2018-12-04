@@ -1,5 +1,5 @@
 <template>
-    <ul class="list-reset absolute pin-b pin-l mb-8 ml-8">
+    <ul class="list-reset md:absolute md:pin-b md:pin-l md:mb-8 md:ml-8">
         <transition-group @enter="enterTransition" @leave="leaveTransition">
             <li v-for="(value, key, index) in source" :key="key + Date.now()" :data-index="index" class="mt-4">
                 <span class="text-blue-lighter text-xs uppercase">{{ key }}</span>

@@ -6,6 +6,7 @@
         <ir-screen-sm direction="down">
             <div class="w-full h-screen flex flex-col justify-center items-center">
                 <mobile-notice></mobile-notice>
+                <mobile-text-overlay :source="textSource"></mobile-text-overlay>
                 <map-title :dataset="dataset"></map-title>
                 <world-map 
                     :dataset="dataset"
@@ -36,6 +37,7 @@
     import DataSelector from './components/DataSelector'
     import MapTitle from './components/MapTitle'
     import MetaInfo from './components/MetaInfo'
+    import MobileTextOverlay from './components/MobileTextOverlay'
 
     export default {
         components: {
@@ -45,7 +47,8 @@
             TextOverlay,
             DataSelector,
             MapTitle,
-            MetaInfo
+            MetaInfo,
+            MobileTextOverlay
         },
 
         data() {
