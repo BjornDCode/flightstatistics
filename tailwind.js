@@ -14,7 +14,7 @@ let colors = {
 
   'red': '#DE5A5A',
   'yellow': '#DACF6D',
-
+  'green': '#42CB7F',
 }
 
 module.exports = {

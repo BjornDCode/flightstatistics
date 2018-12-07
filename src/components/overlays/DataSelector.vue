@@ -47,6 +47,11 @@
                         key: 'busiestRoutes', 
                         name: 'Busiest Routes',
                         color: 'yellow'
+                    },
+                    {
+                        key: 'busiestAirports',
+                        name: 'Busiest Airports',
+                        color: 'green'
                     }
                 ]
             }

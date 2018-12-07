@@ -1,0 +1,134 @@
+{
+    "airports": [
+        {
+            "name": "Hartsfield–Jackson Atlanta International Airport",
+            "code": "atl",
+            "city": "Atlanta",
+            "country": "United States",
+            "totalPassengers": 52640000,
+            "spot": 1,
+            "type": "busiest",
+            "coordinates": {
+                "x": 197,
+                "y": 183
+            }
+        },
+        {
+            "name": "Beijing Capital International Airport",
+            "code": "pek",
+            "city": "Beijing",
+            "country": "China",
+            "totalPassengers": 49380000,
+            "spot": 2,
+            "type": "busiest",
+            "coordinates": {
+                "x": 919,
+                "y": 155
+            }
+        },
+        {
+            "name": "Dubai International Airport",
+            "code": "dxb",
+            "city": "Dubai",
+            "country": "United Arab Emirates",
+            "totalPassengers": 43740000,
+            "spot": 3,
+            "type": "busiest",
+            "coordinates": {
+                "x": 710,
+                "y": 227
+            }
+        },
+        {
+            "name": "Los Angeles International Airport",
+            "code": "lax",
+            "city": "Los Angeles",
+            "country": "United States",
+            "totalPassengers": 42680000,
+            "spot": 4,
+            "type": "busiest",
+            "coordinates": {
+                "x": 71,
+                "y": 184
+            }
+        },
+        {
+            "name": "Haneda Airport",
+            "code": "hnd",
+            "city": "Tokyo",
+            "country": "Japan",
+            "totalPassengers": 41060000,
+            "spot": 5,
+            "type": "busiest",
+            "coordinates": {
+                "x": 1009,
+                "y": 177
+            }
+        },
+        {
+            "name": "O'Hare International Airport",
+            "code": "ord",
+            "city": "Chicago",
+            "country": "United States",
+            "totalPassengers": 39450000,
+            "spot": 6,
+            "type": "busiest",
+            "coordinates": {
+                "x": 195,
+                "y": 150
+            }
+        },
+        {
+            "name": "Heathrow Airport",
+            "code": "lhr",
+            "city": "London",
+            "country": "United Kingdom",
+            "totalPassengers": 38070000,
+            "spot": 7,
+            "type": "busiest",
+            "coordinates": {
+                "x": 512,
+                "y": 112
+            }
+        },
+        {
+            "name": "Hong Kong International Airport",
+            "code": "hkg",
+            "city": "Hong Kong",
+            "country": "Hong Kong",
+            "totalPassengers": 36910000,
+            "spot": 8,
+            "type": "busiest",
+            "coordinates": {
+                "x": 932,
+                "y": 233
+            }
+        },
+        {
+            "name": "Shanghai Pudong International Airport",
+            "code": "pvg",
+            "city": "Shanghai",
+            "country": "China",
+            "totalPassengers": 36690000,
+            "spot": 9,
+            "type": "busiest",
+            "coordinates": {
+                "x": 951,
+                "y": 203
+            }
+        },
+        {
+            "name": "Indira Gandhi International Airport",
+            "code": "del",
+            "city": "Delhi",
+            "country": "India",
+            "totalPassengers": 35040000,
+            "spot": 10,
+            "type": "busiest",
+            "coordinates": {
+                "x": 789,
+                "y": 213
+            }
+        }
+    ]
+}

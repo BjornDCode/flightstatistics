@@ -117,6 +117,17 @@
                     @active="highlightedItem = $event"
                 ></route>
             </g>
+            <g>
+                <airport 
+                    v-if="dataset === 'busiestAirports'"
+                    v-for="(airport, i) in busiestAirports.airports" 
+                    :airport="airport"
+                    :active="airport === highlightedItem"
+                    class="text-green"
+                    @update="emitData"
+                    @active="highlightedItem = $event"
+                ></airport>
+            </g>
         </g>
     </svg>
 </template>
@@ -148,6 +159,9 @@
                     routes: [],
                     airports: []
                 },
+                busiestAirports: {
+                    airports: []
+                },
                 highlightedItem: null
             }
         },
@@ -163,6 +177,12 @@
             this.loadData('/data/busiest-routes.json', data => {
                 this.busiestRoutes = {
                     routes: data.routes,
+                    airports: data.airports
+                }
+            })
+
+            this.loadData('/data/busiest-airports.json', data => {
+                this.busiestAirports = {
                     airports: data.airports
                 }
             })

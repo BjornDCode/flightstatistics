@@ -12,6 +12,27 @@ export default {
             return new Intl.NumberFormat('en-US').format(number)
         },
 
+        formatAirportText(airport) {
+            return Object.assign({
+                'Airport': airport.name,
+                'Code': airport.code.toUpperCase(),
+                'City': airport.city,
+                'Country': airport.country,
+            }, this.formatAirportTypeText(airport) )
+        },
+
+        formatAirportTypeText(airport) {
+            switch (airport.type) {
+                case 'busiest':
+                    return {
+                        "Total Passengers": this.formatNumber(airport.totalPassengers),
+                        "Spot": `#${airport.spot}`
+                    }
+                default:
+                    return {}
+            }
+        },
+
         formatRouteText(route, airports) {
             return Object.assign({
                 'Spot': `#${route.spot}`,

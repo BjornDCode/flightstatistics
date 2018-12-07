@@ -12,7 +12,11 @@
 </template>
 
 <script>
+    import Formatter from '../../mixins/Formatter'
+
     export default {
+        mixins: [ Formatter ],
+
         props: {
             airport: {
                 type: Object,
@@ -26,13 +30,7 @@
 
         methods: {
             emitData() {
-                this.$emit('update', {
-                    'Airport': this.airport.name,
-                    'Code': this.airport.code.toUpperCase(),
-                    'City': this.airport.city,
-                    'Country': this.airport.country,
-                })
-
+                this.$emit('update', this.formatAirportText(this.airport))
                 this.$emit('active', this.airport)
             }
         }
