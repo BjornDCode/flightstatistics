@@ -27,6 +27,10 @@ module.exports = {
                         extractor: TailwindExtractor,
                         extensions: ["html", "js", "vue"]
                     }
+                ],
+                whitelistPatterns: [
+                    /border/,
+                    /bg/
                 ]
             })
         ]

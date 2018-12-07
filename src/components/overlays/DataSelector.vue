@@ -17,7 +17,7 @@
                         class="hidden" 
                     >
                     <span 
-                        :class="[`block w-4 h-4 rounded-full transition-100 group-hover:border-4 border-${dataset.color} mr-2`, currentlySelected === dataset.key ? `bg-${dataset.color}` : `border-2`]"
+                        :class="[`block border-box w-4 h-4 rounded-full transition-100 group-hover:border-4 border-${dataset.color} mr-2`, currentlySelected === dataset.key ? `bg-${dataset.color}` : `border-2`]"
                     ></span>
                     {{ dataset.name }}
                 </label>

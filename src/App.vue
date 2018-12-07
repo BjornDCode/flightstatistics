@@ -82,9 +82,12 @@
     @tailwind utilities;
 
     @responsive {
-
         .transition-100 {
             transition: all 100ms;
+        }
+
+        .border-box {
+            box-sizing: border-box;
         }
     }
 
